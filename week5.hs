@@ -28,9 +28,6 @@ subWordAux (x:xs) [] = False
 subWordAux [x] (y:ys)
     | x == y = True
     | otherwise = False
--- subWordAux [x] (y:ys)
---     | x == y = True
---     | otherwise = False
 subWordAux (x:y:ys) [z] = False
 subWordAux (x:xs) (y:ys)
     | x == y = subWordAux ((head xs):(tail xs)) ((head ys):(tail ys))
